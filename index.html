@@ -2,111 +2,292 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Girlfriend Day</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Girlfriend Day, Sayang 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500;700&family=Playfair+Display:ital,wght@0,500;1,600&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: sans-serif;
-      background: linear-gradient(to bottom right, #ffcde5, #ffe9cf);
-      padding: 30px;
-      margin: 0;
+    :root {
+      --pink: #ffcde5;
+      --hotpink: #f67da2;
+      --peach: #ffe9cf;
+      --white: #ffffff;
+      --shadow: rgba(0,0,0,0.1);
     }
-    .container {
-      max-width: 700px;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, var(--pink), var(--peach));
+      color: #444;
+      padding: 40px 20px;
+    }
+    .card {
+      background: var(--white);
+      max-width: 720px;
       margin: auto;
-      background: white;
-      padding: 25px;
+      padding: 30px;
       border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      box-shadow: 0 10px 30px var(--shadow);
+      animation: fadeIn 0.7s ease;
     }
     h1 {
-      color: #f67da2;
+      font-family: 'Pacifico', cursive;
+      font-size: 2.3rem;
       text-align: center;
+      color: var(--hotpink);
+      margin-bottom: 10px;
     }
-    .sub {
+    .subhead {
       text-align: center;
+      font-size: 1rem;
       color: #888;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
     .content {
+      min-height: 240px;
       font-size: 1.05rem;
       line-height: 1.6;
     }
     .quote {
-      background: #fff0f5;
-      border-left: 4px solid #f67da2;
-      padding: 12px 16px;
       font-style: italic;
+      color: var(--hotpink);
+      background: #fff1f8;
+      padding: 15px 20px;
+      border-left: 5px solid var(--hotpink);
+      border-radius: 12px;
       margin: 20px 0;
     }
-    .nav {
+    .buttons {
       display: flex;
       justify-content: space-between;
       margin-top: 30px;
     }
     button {
-      padding: 10px 20px;
-      background: #f67da2;
-      color: white;
+      background-color: var(--hotpink);
       border: none;
-      border-radius: 8px;
+      padding: 10px 20px;
+      color: white;
+      border-radius: 12px;
+      font-weight: bold;
       cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background-color: #d95e86;
     }
     .footer {
-      margin-top: 40px;
+      font-size: 0.85rem;
       text-align: center;
-      font-size: 0.9rem;
       color: #aaa;
+      margin-top: 40px;
+    }
+    .popup-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 99;
+    }
+    .popup-box {
+      background: var(--white);
+      padding: 25px 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+      max-width: 500px;
+      text-align: center;
+      animation: fadeIn 0.5s ease;
+    }
+    .popup-box h2 {
+      margin-bottom: 15px;
+      font-family: 'Pacifico', cursive;
+      font-size: 1.8rem;
+      color: var(--hotpink);
+    }
+    .popup-box p {
+      font-size: 1rem;
+      color: #444;
+      line-height: 1.6;
+    }
+    .popup-box button {
+      margin-top: 20px;
+      background-color: var(--hotpink);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .deep {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-style: normal;
+      background: #fff6fa;
+      padding: 25px;
+      border-radius: 20px;
+      border: 1px dashed var(--hotpink);
+      text-align: center;
+      line-height: 1.8;
+      margin-top: 20px;
+    }
+    .signature {
+      margin-top: 25px;
+      text-align: center;
+      font-family: 'Pacifico', cursive;
+      font-size: 1.1rem;
+      color: var(--hotpink);
+    }
+    .closing-page {
+      font-family: 'Pacifico', cursive;
+      font-size: 1.5rem;
+      text-align: center;
+      color: var(--hotpink);
+      padding: 30px 20px;
+      background: #fff6fa;
+      border-radius: 20px;
+      line-height: 1.5;
+    }
+    .closing-page .love-you {
+      font-size: 2.2rem;
+      margin-top: 20px;
+      color: var(--hotpink);
+    }
+    .closing-page .small-text {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      margin-top: 15px;
+      color: #666;
+    }
+    .final-page {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1rem;
+        text-align: center;
+        color: #444;
+        background: #fff6fa;
+        padding: 25px;
+        border-radius: 20px;
+        line-height: 1.6;
+    }
+    .final-page .main-message {
+        font-family: 'Pacifico', cursive;
+        font-size: 1.8rem;
+        color: var(--hotpink);
+        margin-bottom: 15px;
+    }
+    .final-page .date-location {
+        font-size: 0.9rem;
+        color: #888;
+        margin-top: 15px; /* Disesuaikan agar tidak terlalu jauh */
+        font-style: italic;
+    }
+    .final-page .closing-sign {
+        font-family: 'Pacifico', cursive;
+        font-size: 1.2rem;
+        color: var(--hotpink);
+        margin-top: 20px; /* Jarak antara teks dan tanda tangan */
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Happy Girlfriend Day</h1>
-    <div class="sub">from kak al to my love</div>
+  <div class="card">
+    <h1 id="mainTitle"></h1>
+    <div class="subhead" id="subheadText"></div>
     <div class="content" id="content"></div>
-    <div class="nav">
+    <div class="buttons">
       <button onclick="prevPage()">Back</button>
       <button onclick="nextPage()">Next</button>
     </div>
-    <div class="footer">170+ km away, but always close in heart 💗</div>
+    <div class="footer">from 170+ km away • but never truly apart 💌</div>
   </div>
-
+  <div class="popup-overlay" id="popup">
+    <div class="popup-box">
+      <h2>Surat Rahasia 💌</h2>
+      <p id="secretLetterContent"></p>
+      <button onclick="closePopup()">Tutup</button>
+    </div>
+  </div>
   <script>
-    const pages = [
-      `Hari ini spesial bukan karena tanggalnya, tapi karena aku punya kamu — perempuan yang selalu bisa bikin hatiku tenang dan senyum tanpa alasan.<br><br><div class="quote">"170 kilometers apart, but you’re still the closest one to my heart."</div><br>Jarak memang panjang, tapi rasa sayang ini ga pernah berhenti bahkan satu hari pun. Even from afar, you're the one I keep thinking of, day and night.`,
-
-      `Sayang, I know I'm not perfect. Ada banyak hal yang mungkin belum bisa aku lakukan untuk kamu. Dan salah satunya... I really wanted to give you flowers today — personally. Tapi belum bisa kesampaian.<br><br><b>I'm sorry</b> I can't be there to hand them to you, padahal hati ini pengen banget lihat kamu senyum sambil nerima bunga itu.`,
-
-      `Aku juga minta maaf atas semua kesalahan selama ini, baik yang sengaja maupun ga. Thank you for always understanding me more than anyone else ever could.<br><br>You're not just my girlfriend. You're my best friend, partner, and safe place in one.`,
-
-      `Di momen ini aku cuma pengen kamu tahu: aku bersyukur banget punya kamu. Dari semua orang di dunia ini, yang aku pilih tetap kamu.<br><br><div class="quote">“One day, this distance will just be a story we laugh about — while holding hands in the same place.”</div><br>Until that day, I'll keep loving you from here, with all I have.`,
-
-      `Selamat Hari Pacar Perempuan ya, sayangku. Terima kasih sudah jadi kamu — yang sabar, kuat, dan tulus. I’m lucky to call you mine.<br><br>With love that’s silly, sincere, and forever yours,<br><br><b>Kak Al</b>`
+    const pageTitles = [
+      "Happy Girlfriend Day 💖",
+      "My Apologies to You", // Judul halaman kedua diubah ke Bahasa Inggris
+      "Perasaan Untukmu",
+      "Janji Masa Depan",
+      "Untukmu, Alayya Tercinta",
+      "Cinta yang Tak Terbatas",
+      "Selalu Bersamamu",
+      "Pesan Terakhirku Untukmu",
+      "Dengan Sejuta Rasa"
     ];
 
-    let currentPage = 0;
-    const contentDiv = document.getElementById('content');
+    const secretLetterText = `
+      Di setiap detak jantung, ada namamu yang terukir. Kamu adalah melodi paling indah di antara bisingnya dunia, puisi yang tak pernah usai aku baca. Mencintaimu adalah pilihan terbaik yang tak pernah aku sesali. Setiap pagi, senyummu adalah matahari yang membangunkanku, dan setiap malam, bayangmu adalah bintang yang menemaniku. Aku bersyukur untuk setiap tawa, setiap pengertian, dan setiap keheningan yang kita bagi. Kamu adalah rumah, adalah pelabuhan, adalah segalanya.
+    `;
 
-    function showPage() {
-      contentDiv.innerHTML = pages[currentPage];
+    const pages = [
+      `hari ini spesial bukan hanya karena tanggalnya, tapi karena aku punya kamu — perempuan yang selalu bisa bikin hatiku tenang dan senyum tanpa alasan.<div class="quote">"170 kilometers apart, but you’re still the closest one to my heart."</div>jarak memang panjang, tapi rasa sayang ini ga pernah berhenti bahkan satu hari pun. even from afar, you're the one i keep thinking of, day and night.`,
+      `sayang, i know i'm not perfect. ada banyak hal yang mungkin belum bisa aku lakuin buat kamu.<br><br><strong>dan salah satunya...</strong> aku pengen banget kasih bunga hari ini — langsung ke tangan kamu. tapi aku belum bisa kesana.<br><br>maaf yaa sayangku, padahal aku pengen liat kamu senyum waktu nerima itu :(`,
+      `aku juga minta maaf atas semua kesalahanku — baik yang sengaja maupun yang ga aku sadari yaa cantik.<br><br>thanks for still choosing me, for understanding me, for being so warm and patient. you're not just my girlfriend. you're my best friend, partner, and safe place in one.<br><br><button onclick="openPopup()">Buka Surat Rahasia 💌</button>`,
+      `di momen ini, aku cuma pengen kamu tau:<div class="quote">“one day, this distance will just be a story we laugh about — while holding hands in the same place.”</div>sampai hari itu datang, i’ll keep loving you from here, with all i have.`,
+      `happy gf day yaa cantik.<br><br>thank you for being you — yang sabar, kuat, tulus, dan selalu ada walaupun dari jauh.<br><br>with love that’s silly, sincere, and forever yours,<br><strong>kak al 💗</strong>`,
+      `<div  class="deep">Alayya Mauliza Lutfina, selama bersamamu, aku belajar bahwa cinta itu ga harus selalu terdengar keras — kadang justru muncul di momen paling hening, di diam yang terasa penuh. Di malam-malam panjang yang cuma diisi satu pikiran: I choose you, again and again.<br><br>Every version of you — versi kamu yang lembut, yang kuat, yang capek, yang bersinar. Aku tetap milih kamu, setiap kali.<br><br>There’s something timeless about us. Rasanya kita bukan sekadar singgah di hidup masing-masing, tapi memang ditulis bareng dalam cerita panjang — terselip di tiap bab, tetap di pinggir-pinggirnya.<br><br>Di dunia yang serba cepat dan serba berubah ini, you’ve become my constant. Dan buat aku, cinta memang seharusnya begitu — tenang, tapi tak berbatas.</div><div class="signature">for Alayya, from kak al 🌷</div>`,
+      `<div class="closing-page">
+          For all the smiles you bring, the calm you give, and the future we're building,
+          <div class="love-you">I simply adore you.</div>
+          <div class="small-text">Always and forever, my dear.</div>
+       </div>`,
+      `<div class="final-page">
+          <div class="main-message">Terima Kasih, Maaf, dan Harapan Terbesarku.</div>
+          Untuk semua canda tawa, setiap dukungan yang tak pernah habis, dan kesabaranmu yang luar biasa—terima kasih banyak, Alayya. Aku tahu aku masih banyak kekurangan, dan untuk semua itu, aku mohon maaf. Semoga kita bisa terus tumbuh bersama, melewati setiap rintangan, dan menjadikan jarak ini hanya sebuah kenangan indah di masa depan.
+          <div class="closing-sign">Dengan segenap cinta dan rindu,</div>
+          <div class="date-location">Kediri, 1 Agustus 2025</div>
+      </div>`
+    ];
+
+    let page = 0;
+    const contentEl = document.getElementById("content");
+    const popup = document.getElementById("popup");
+    const subheadEl = document.getElementById("subheadText");
+    const mainTitleEl = document.getElementById("mainTitle");
+    const secretLetterContentEl = document.getElementById("secretLetterContent");
+
+    function updateContent() {
+      contentEl.innerHTML = pages[page];
+      mainTitleEl.textContent = pageTitles[page];
+      if (page === 0) {
+        subheadEl.textContent = "For my love, Alayya — the one I’d choose in every lifetime";
+      } else {
+        subheadEl.textContent = "";
+      }
+      secretLetterContentEl.innerHTML = secretLetterText;
     }
 
     function nextPage() {
-      if (currentPage < pages.length - 1) {
-        currentPage++;
-        showPage();
+      if (page < pages.length - 1) {
+        page++;
+        updateContent();
       }
     }
 
     function prevPage() {
-      if (currentPage > 0) {
-        currentPage--;
-        showPage();
+      if (page > 0) {
+        page--;
+        updateContent();
       }
     }
 
-    showPage();
+    function openPopup() {
+      popup.style.display = "flex";
+    }
+
+    function closePopup() {
+      popup.style.display = "none";
+    }
+
+    updateContent();
   </script>
 </body>
 </html>
